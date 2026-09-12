@@ -10,7 +10,7 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddControllers();
 
-// 2. Configure Swagger Generator (Only one AddSwaggerGen call)
+// 2. Configure Swagger Generator 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -50,6 +50,9 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+
+// Enable legacy/flexible timestamp behavior or ensure all dates are UTC
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 var app = builder.Build();
 

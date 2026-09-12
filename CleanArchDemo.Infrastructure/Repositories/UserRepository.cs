@@ -1,7 +1,8 @@
 ﻿using CleanArchDemo.Application.Interfaces;
 using CleanArchDemo.Domain.Entities;
-using CleanArchDemo.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+
+using CleanArchDemo.Infrastructure.Data;
 
 namespace CleanArchDemo.Infrastructure.Repositories
 {

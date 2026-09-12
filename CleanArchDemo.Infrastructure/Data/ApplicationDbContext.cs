@@ -10,6 +10,8 @@ namespace CleanArchDemo.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.HasDefaultSchema("cleanarch");
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.HasKey(e => e.Id);
